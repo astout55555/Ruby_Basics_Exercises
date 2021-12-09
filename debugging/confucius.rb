@@ -12,7 +12,7 @@ wise_people = ['Yoda', 'Confucius', 'Einstein'] # an array of current options. i
 
 wise_people_list = '' # set up an empty string to put the names into, easier to print
 wise_people.each { |wise_person| wise_people_list << "#{wise_person}, " } # adds each person from the array to the string, with proper spacing
-person = '' # initialized the empty string before the loop so I can call it afterwards too
+person = '' # initialized as an empty string before the loop so I can call it afterwards too
 
 loop do # loops until we get valid input, regardless of capitalization. `person` ends up capitalized for later though.
   puts "Who'd you like to hear from? I know #{wise_people_list}and that's about it." # no space here between list and 'and' due to ', ' at end of list
@@ -23,6 +23,8 @@ loop do # loops until we get valid input, regardless of capitalization. `person`
 end
 
 puts "#{person} says: #{get_quote(person)}" # finally, print the appropriate name and quote based on input
+
+# puts get_quote('Confucius') # the original problem is also solved, so we can do this too
 
 # original code below
 
